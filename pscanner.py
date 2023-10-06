@@ -21,8 +21,8 @@ try:
 	for port in range(50,85):
 		s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 		socket.setdefaulttimeout(1)
-		result = s.connect_ex((target.port))
-		if result = 0:
+		result = s.connect_ex((target,port))
+		if result == 0:
 			print(f"Port {port} is open")
 		s.close()
 
